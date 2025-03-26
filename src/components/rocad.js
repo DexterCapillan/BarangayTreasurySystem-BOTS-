@@ -7,7 +7,7 @@ function Rocad() {
         Reports on Collection and Deposits
       </h2>
 
-      <table className="table table-bordered w-full">
+      <table className="table-fixed w-full border-collapse border border-gray-300">
         {/* First Row: Title */}
         <thead>
           <tr>
@@ -31,19 +31,19 @@ function Rocad() {
           </tr>
           {/* Third Row: Sections */}
           <tr>
-            <td rowSpan="9" className="p-2 font-bold bg-gray-200 text-center">
+            <td rowSpan="9" className="p-2 font-bold bg-gray-200 text-center w-40">
               A. Collections
             </td>
-            <td colSpan="2" className="p-2 font-bold bg-gray-200 text-center">
+            <td colSpan="2" className="p-2 font-bold bg-gray-200 text-center w-36">
               Official Receipt
             </td>
-            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center">
+            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center w-36">
               Payor
             </td>
-            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center">
+            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center w-36">
               Nature of Collection
             </td>
-            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center">
+            <td rowSpan="2" className="p-2 font-bold bg-gray-200 text-center w-36">
               Amount
             </td>
           </tr>
@@ -78,6 +78,7 @@ function Rocad() {
             <td colSpan="2" className="p-2 text-center">
               Name of Accountable Officer/Bank/Branches
             </td>
+
             <td colSpan="2" className="p-2 text-center">
               Reference
             </td>
@@ -148,7 +149,7 @@ function Rocad() {
             <td className="p-2 font-semibold"></td>
             <td className="p-2 font-semibold"></td>
           </tr>
-          
+
           <tr className="bg-gray-100">
             <td className="p-2 font-semibold">Less:</td>
             <td className="p-2 font-semibold"></td>
@@ -173,52 +174,51 @@ function Rocad() {
               D. ACCOUNTABILITY OF ACCOUNTABLE FORMS
             </td>
           </tr>
-        
+
           <tr>
-            <td rowSpan="9" className="p-2 font-bold bg-gray-200 text-center">
+            <td
+              rowSpan="9"
+              className="p-2 font-bold bg-gray-200 text-center w-40"
+            >
               Name of Form and No.
             </td>
-            <td  colSpan="3" className="p-2 font-bold bg-gray-200 text-center">
+            <td
+              colSpan="2"
+              className="p-2 font-bold bg-gray-200 text-center w-36"
+            >
               Beginning Balance
             </td>
-            <td   colSpan="3" className="p-2 font-bold bg-gray-200 text-center flex-1 min-w-[250px]">
+            <td
+              colSpan="1"
+              className="p-2 font-bold bg-gray-200 text-center w-36"
+            >
               Receipt
             </td>
-            <td   colSpan="3" className="p-2 font-bold bg-gray-200 text-center">
+            <td
+              colSpan="1"
+              className="p-2 font-bold bg-gray-200 text-center w-36"
+            >
               Issued
             </td>
-            <td   colSpan="3" className="p-2 font-bold bg-gray-200 text-center">
+            <td
+            
+              className="p-2 font-bold bg-gray-200 text-center w-36"
+            >
               Ending Balance
             </td>
           </tr>
-          <tr>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-          </tr>
-          <tr>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">1</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">2</td>
-            <td className="p-2 font-bold bg-gray-200 text-center">3</td>
-          </tr>
+
+          {/* Data Entry */}
+          {[...Array(7)].map((_, index) => (
+            <tr key={index}>
+              <td className="p-2 text-center"></td>
+              <td className="p-2 text-center"></td>
+              <td className="p-2 text-center"></td>
+              <td className="p-2 text-center"></td>
+              <td className="p-2 text-center"></td>
+              <td className="p-2 text-center"></td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
