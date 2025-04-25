@@ -9,6 +9,14 @@ function UpdateDashboard() {
     { name: "February", updates: 15 },
     { name: "March", updates: 7 },
     { name: "April", updates: 20 },
+    { name: "May", updates: 20 },
+    { name: "June", updates: 35 },
+    { name: "July", updates: 9 },
+    { name: "August", updates: 17 },
+    { name: "September", updates: 13 },
+    { name: "October", updates: 22 },
+    { name: "November", updates: 18 },
+    { name: "December", updates: 30 },
   ]);
 
   return (
