@@ -85,7 +85,7 @@ function Rocad() {
   return (
     <div className="p-6 bg-white overflow-auto">
       <h2 className="text-2xl font-bold text-center mb-4 text-blue-600">
-        Reports on Collection and Deposits
+        Reports on Collection and Deposits (ROCAD)
       </h2>
 
       <div className="mb-4 flex gap-2 justify-end">
@@ -168,7 +168,7 @@ function Rocad() {
     <td className="p-1 text-center">
       <input
         type="text"
-        className="w-full border border-gray-300 p-1 rounded"
+        className="w-full border border-gray-300 p-1 rounded"                                                                                                                    
         value={row.nature}
         onChange={(e) => handleCollectionChange(index, "nature", e.target.value)}
       />
@@ -190,7 +190,6 @@ function Rocad() {
   </td>
   <td className="p-2 text-center">₱{collectionTotal.toFixed(2)}</td>
 </tr>
-
 
           <tr className="bg-gray-200 font-bold">
             <td colSpan="2" className="p-2 text-center">
@@ -254,6 +253,7 @@ function Rocad() {
             </td>
             <td className="p-2 font-bold bg-gray-200 text-center w-36">
               Receipt
+              
             </td>
             <td className="p-2 font-bold bg-gray-200 text-center w-36">
               Issued
@@ -308,22 +308,9 @@ function Rocad() {
             </tr>
           ))}
           
+         
         </tbody>
-        <tr className="bg-gray-100">
-    <td className="p-2 text-center">AF#51</td>
-    <td className="p-2 text-center">Qty</td>
-    <td className="p-2 text-center">From</td>
-    <td className="p-2 text-center">To</td>
-    <td className="p-2 text-center">Qty</td>
-    <td className="p-2 text-center">From</td>
-    <td className="p-2 text-center">To</td> 
-    <td className="p-2 text-center">Qty</td>
-    <td className="p-2 text-center">From</td>
-    <td className="p-2 text-center">To</td> 
-    <td className="p-2 text-center">Qty</td>
-    <td className="p-2 text-center">From</td>
-    <td className="p-2 text-center">To</td>
-  </tr>
+       
       </table>
     </div>
   );

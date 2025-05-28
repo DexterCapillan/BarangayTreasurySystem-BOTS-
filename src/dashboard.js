@@ -31,7 +31,7 @@ function Dashboard() {
             <h2 className="text-2xl font-semibold mb-4 text-black-600">Roaao</h2>  {/* Updated to Roaao */}
             <Roaao />
           </div>
-        );
+        ); 
       default:
         return <Rocad />;
     }
