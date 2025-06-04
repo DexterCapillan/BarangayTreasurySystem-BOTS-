@@ -1,18 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Roaao from './components/roaao';
 import Rocad from './components/rocad';
-import UpdateDashboard from './components/UpdateDashboard';  // Import UpdateDashboard
+import UpdateDashboard from './components/UpdateDashboard';
+import TransmissionSlip from './components/TransmissionSlip'; // ✅ Step 1: Import it
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* Navigation with links */}
         <nav className="bg-gray-800 p-4">
           <ul className="flex space-x-6">
-            {/* Using NavLink for active link styling */}
             <li>
               <NavLink
                 to="/"
@@ -43,17 +42,27 @@ function App() {
                 Rocad
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/transmission"
+                className={({ isActive }) =>
+                  isActive ? 'text-white font-semibold' : 'text-gray-400'
+                }
+              >
+                Transmission Slip
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
-        {/* Routes for the page components */}
         <Routes>
-          <Route path="/" element={<UpdateDashboard />} />  {/* Updated to display UpdateDashboard */}
+          <Route path="/" element={<UpdateDashboard />} />
           <Route path="/roaao" element={<Roaao />} />
           <Route path="/rocad" element={<Rocad />} />
+          <Route path="/transmission" element={<TransmissionSlip />} /> {/* ✅ Step 3 */}
         </Routes>
       </div>
-    </Router>  
+    </Router>
   );
 }
 
